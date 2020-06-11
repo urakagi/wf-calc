@@ -1,0 +1,26 @@
+.line {
+    color: white;
+    text-align: center;
+    height: 25px;
+    line-height: 25px;
+}
+
+.line0 {
+    background-color: purple;
+}
+
+.line1 {
+    background-color: darkgoldenrod;
+}
+
+.line2 {
+    background-color: darkblue;
+}
+
+.line-name {
+    border: solid 1px black;
+}
+
+.union {
+    vertical-align: top;
+}

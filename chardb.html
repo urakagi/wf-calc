@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-4817067-47"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+
+      gtag('config', 'UA-4817067-47');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>キャラ逆引き - ワーフリツール</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/chardb.css">
+    <script src="data/characters.js"></script>
+    <script src="data/constants.js"></script>
+    <script src="js/chardb.js"></script>
+    <script data-ad-client="ca-pub-4611969396217909" async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+<body>
+<div id="conditions">
+    <h3>プロフィール絞り込み</h3>
+    <div>
+        <p>
+        <div class="cond-label">名前</div>
+        <input id="cond-name" type="text">
+        </p>
+        <p>
+        <div class="cond-label">属性</div>
+        <div class="cond-elements">
+            <input type="checkbox" id="cond-all-elements" checked="checked">
+            <label for="cond-all-elements">全て</label>
+            <input type="checkbox" id="cond-fire" class="cond-element" checked="checked">
+            <label for="cond-fire"><img src="img/fire.png"></label>
+            <input type="checkbox" id="cond-water" class="cond-element" checked="checked">
+            <label for="cond-water"><img src="img/water.png"></label>
+            <input type="checkbox" id="cond-thunder" class="cond-element" checked="checked">
+            <label for="cond-thunder"><img src="img/thunder.png"></label>
+            <input type="checkbox" id="cond-wind" class="cond-element" checked="checked">
+            <label for="cond-wind"><img src="img/wind.png"></label>
+            <input type="checkbox" id="cond-light" class="cond-element" checked="checked">
+            <label for="cond-light"><img src="img/light.png"></label>
+            <input type="checkbox" id="cond-dark" class="cond-element" checked="checked">
+            <label for="cond-dark"><img src="img/dark.png"></label>
+        </div>
+        </p>
+        <p>
+        <div class="cond-label">パワフリタイプ</div>
+        <div class="cond-types">
+            <input type="checkbox" id="cond-all-types" checked="checked">
+            <label for="cond-all-types">全て</label>
+            <input type="checkbox" id="cond-melee" class="cond-type" checked="checked">
+            <label for="cond-melee"><img src="img/melee.png"></label>
+            <input type="checkbox" id="cond-sword" class="cond-type" checked="checked">
+            <label for="cond-sword"><img src="img/sword.png"></label>
+            <input type="checkbox" id="cond-shoot" class="cond-type" checked="checked">
+            <label for="cond-shoot"><img src="img/shoot.png"></label>
+            <input type="checkbox" id="cond-assist" class="cond-type" checked="checked">
+            <label for="cond-assist"><img src="img/assist.png"></label>
+            <input type="checkbox" id="cond-special" class="cond-type" checked="checked">
+            <label for="cond-special"><img src="img/special.png"></label>
+        </div>
+        </p>
+        <p>
+        <div class="cond-label">種族</div>
+        <div>
+            <input type="checkbox" id="cond-all-races" checked="checked"><label for="cond-all-races">全て</label>
+        </div>
+        <hr>
+        <div class="cond-races">
+            <input class="cond-race" type="checkbox" id="cond-race-human" checked="checked"><label
+                for="cond-race-human">人</label>
+            <input class="cond-race" type="checkbox" id="cond-race-spirit" checked="checked"><label
+                for="cond-race-spirit">精霊</label>
+            <input class="cond-race" type="checkbox" id="cond-race-beast" checked="checked"><label
+                for="cond-race-beast">獣</label>
+            <input class="cond-race" type="checkbox" id="cond-race-mecha" checked="checked"><label
+                for="cond-race-mecha">機械</label>
+            <input class="cond-race" type="checkbox" id="cond-race-mystic" checked="checked"><label
+                for="cond-race-mystic">妖</label>
+            <input class="cond-race" type="checkbox" id="cond-race-undead" checked="checked"><label
+                for="cond-race-undead">不死</label>
+        </div>
+        <div class="cond-races">
+            <input class="cond-race" type="checkbox" id="cond-race-devil" checked="checked"><label
+                for="cond-race-devil">魔</label>
+            <input class="cond-race" type="checkbox" id="cond-race-dragon" checked="checked"><label
+                for="cond-race-dragon">ドラゴン</label>
+            <input class="cond-race" type="checkbox" id="cond-race-plant" checked="checked"><label
+                for="cond-race-plant">植物</label>
+            <input class="cond-race" type="checkbox" id="cond-race-aquatic" checked="checked"><label
+                for="cond-race-aquatic">水棲</label>
+        </div>
+        </p>
+        <p>
+        <div class="cond-label">レアリティ</div>
+        <div class="cond-rarities">
+            <input type="checkbox" id="cond-all-rarities" checked="checked">
+            <label for="cond-all-rarities">全て</label>
+            <input type="checkbox" id="cond-star5" class="cond-rarity" checked="checked">
+            <label for="cond-star5"><img src="img/star5.png"></label>
+            <input type="checkbox" id="cond-star4" class="cond-rarity" checked="checked">
+            <label for="cond-star4"><img src="img/star4.png"></label>
+            <input type="checkbox" id="cond-star3" class="cond-rarity" checked="checked">
+            <label for="cond-star3"><img src="img/star3.png"></label>
+            <input type="checkbox" id="cond-star2" class="cond-rarity" checked="checked">
+            <label for="cond-star2"><img src="img/star2.png"></label>
+            <input type="checkbox" id="cond-star1" class="cond-rarity" checked="checked">
+            <label for="cond-star1"><img src="img/star1.png"></label>
+        </div>
+        </p>
+    </div>
+    <h3>スキアビ絞り込み</h3>
+    <div>
+        <p>
+        <div class="cond-label">スキルウェイト</div>
+        <div><input class="cond-sw" id="cond-sw-min" type="number" step="5">
+            &nbsp;～&nbsp;
+            <input class="cond-sw" id="cond-sw-max" step="5" type="number">
+        </div>
+        </p>
+        <p>
+        <div class="cond-label">最大ヒット数</div>
+        <div><input class="cond-hit" id="cond-hit-min" type="number">
+            &nbsp;～&nbsp;
+            <input class="cond-hit" id="cond-hit-max" type="number">
+        </div>
+        </p>
+        <p>
+        <div class="cond-label">検索文字</div>
+        <div><input id="cond-search" type="text" placeholder="例：貫通効果" style="width: 500px;"></div>
+        </p>
+        <p>
+        <div class="cond-label">検索範囲</div>
+        <div>
+            <input type="checkbox" id="cond-all-targets" checked="checked"><label for="cond-all-targets">全て</label>
+        </div>
+        <hr>
+        <div class="search-target">
+            <input type="checkbox" id="cond-leader" checked="checked"><label for="cond-leader">リーダー特性</label>
+            <input type="checkbox" id="cond-skill" checked="checked"><label for="cond-skill">スキル</label>
+        </div>
+        <div class="search-target">
+            <input type="checkbox" id="cond-a1" checked="checked"><label for="cond-a1">アビリティ１</label>
+            <input type="checkbox" id="cond-a2" checked="checked"><label for="cond-a2">アビリティ２</label>
+            <input type="checkbox" id="cond-a3" checked="checked"><label for="cond-a3">アビリティ３</label>
+        </div>
+        </p>
+    </div>
+    <h3>表示項目</h3>
+    <div class="columns">
+        <p>
+        <div class="cond-label">プリセット</div>
+        <input type="radio" id="preset-full" name="preset" value="full" checked="true">
+        <label for="preset-full">全項目</label>
+        <input type="radio" id="preset-only-names" name="preset" value="only-names">
+        <label for="preset-only-names">名前のみ</label>
+        <input type="radio" id="preset-custom" name="preset" value="custom">
+        <label for="preset-custom">カスタム</label>
+        </p>
+        <p>
+        <div class="cond-label">プロフィール</div>
+        <div>
+            <input type="checkbox" id="show-pic" checked="checked"><label for="show-pic">キャラ画像</label>
+            <input type="checkbox" id="show-nickname" checked="checked"><label for="show-nickname">二つ名</label>
+            <input type="checkbox" id="show-element" checked="checked"><label for="show-element">属性</label>
+            <input type="checkbox" id="show-type" checked="checked"><label for="show-type">タイプ</label>
+        </div>
+        <div>
+            <input type="checkbox" id="show-line2" checked="checked"><label for="show-line2">レアリティ・ステータス・種族</label>
+        </div>
+        </p>
+        <p>
+        <div class="cond-label">スキル</div>
+        <div>
+            <input type="checkbox" id="show-skill-desc" checked="checked"><label for="show-skill-desc">スキル説明</label>
+            <input type="checkbox" id="show-sw" checked="checked"><label for="show-sw">スキルウェイト</label>
+            <input type="checkbox" id="show-hit" checked="checked"><label for="show-hit">最大ヒット数</label>
+        </div>
+        </p>
+        <p>
+        <div class="cond-label">リーダー特性・アビリティ</div>
+        <div>
+            <input type="checkbox" id="show-ls" checked="checked"><label for="show-ls">リーダー特性</label>
+        </div>
+        <div>
+            <input type="checkbox" id="show-a1" checked="checked"><label for="show-a1">アビリティ１</label>
+            <input type="checkbox" id="show-a2" checked="checked"><label for="show-a2">アビリティ２</label>
+            <input type="checkbox" id="show-a3" checked="checked"><label for="show-a3">アビリティ３</label>
+        </div>
+        </p>
+    </div>
+</div>
+<p class="execLine">
+    <button id="exec" class="ui-button ui-widget ui-corner-all" onclick="exec()">検索</button>
+    &nbsp;
+    <span id="resultCount"></span>
+    <button style="float: right" class="ui-button ui-widget ui-corner-all" onclick="reset()">リセット</button>
+</p>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-4611969396217909"
+     data-ad-slot="6339376907"></ins>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<div id="result">
+</div>
+<hr>
+<p>
+    すべての数値はLv100絆の時のものです。<br>
+    詳しい解説などは<a href="https://www.wf-calc.net/entry/2020/06/01/121743">ブログ記事</a>を参照してください。
+</p>
+<p>
+    作った人：<a href="https://twitter.com/urakagi">砂井裏鍵</a><br>
+    データに不備があった場合はツイッターまで報告をお願いします。<br>
+    <a href="https://t.co/frOBe2fT42?amp=1">ワールドフリッパー総合サーバーDiscord</a>にもいるかもしれません。
+</p>
+<p>
+素敵な賽銭箱はここよ。神様と同じで、賽銭を投げても見返りは無いわよ？
+<div id="paypal-button-container"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=AeWoIWIxNSb23vvUcLyhaenQcTxeFeLNn7oE6ra8vKqJYLug9CunjbEKXXC4kpE1aSm9i3B3z7JBKLvz&currency=JPY" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+    style: {
+      shape: 'pill',
+      color: 'gold',
+      layout: 'horizontal',
+      label: 'paypal',
+
+    },
+    createOrder: function(data, actions) {
+      return actions.order.create({
+        purchase_units: [{
+          amount: {
+            value: '500'
+          }
+        }]
+      });
+    },
+    onApprove: function(data, actions) {
+      return actions.order.capture().then(function(details) {
+        alert('Transaction completed by ' + details.payer.name.given_name + '!');
+      });
+    }
+  }).render('#paypal-button-container');
+</script>
+</p>
+</body>
+</html>
