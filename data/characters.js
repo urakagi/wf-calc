@@ -1,6 +1,6 @@
 const characters = [{
   "name": "イナホ",
-  "star": "5",
+  "star": 5,
   "element": "光",
   "type": "特殊",
   "race": "妖",
@@ -15,7 +15,7 @@ const characters = [{
   "id": 1
 }, {
   "name": "エクリール",
-  "star": "5",
+  "star": 5,
   "element": "光",
   "type": "剣士",
   "race": "人",
@@ -30,7 +30,7 @@ const characters = [{
   "id": 2
 }, {
   "name": "タージェス",
-  "star": "5",
+  "star": 5,
   "element": "光",
   "type": "剣士",
   "race": "人/機械",
@@ -45,7 +45,7 @@ const characters = [{
   "id": 3
 }, {
   "name": "ネフティム",
-  "star": "5",
+  "star": 5,
   "element": "光",
   "type": "特殊",
   "race": "人",
@@ -60,7 +60,7 @@ const characters = [{
   "id": 4
 }, {
   "name": "ネフティム",
-  "star": "5",
+  "star": 5,
   "element": "光",
   "type": "特殊",
   "race": "人",
@@ -75,7 +75,7 @@ const characters = [{
   "id": 5
 }, {
   "name": "バレッタ",
-  "star": "5",
+  "star": 5,
   "element": "光",
   "type": "射撃",
   "race": "人/機械",
@@ -90,7 +90,7 @@ const characters = [{
   "id": 6
 }, {
   "name": "ラーゼルト",
-  "star": "5",
+  "star": 5,
   "element": "光",
   "type": "剣士",
   "race": "人",
@@ -105,7 +105,7 @@ const characters = [{
   "id": 7
 }, {
   "name": "リーブラム",
-  "star": "5",
+  "star": 5,
   "element": "光",
   "type": "剣士",
   "race": "人",
@@ -120,7 +120,7 @@ const characters = [{
   "id": 8
 }, {
   "name": "イルミ",
-  "star": "4",
+  "star": 4,
   "element": "光",
   "type": "特殊",
   "race": "人/精霊",
@@ -135,7 +135,7 @@ const characters = [{
   "id": 9
 }, {
   "name": "エリヤ",
-  "star": "4",
+  "star": 4,
   "element": "光",
   "type": "射撃",
   "race": "人/精霊",
@@ -150,7 +150,7 @@ const characters = [{
   "id": 10
 }, {
   "name": "キーラ",
-  "star": "4",
+  "star": 4,
   "element": "光",
   "type": "剣士",
   "race": "人",
@@ -165,7 +165,7 @@ const characters = [{
   "id": 11
 }, {
   "name": "ジェラール",
-  "star": "4",
+  "star": 4,
   "element": "光",
   "type": "剣士",
   "race": "人",
@@ -180,7 +180,7 @@ const characters = [{
   "id": 12
 }, {
   "name": "ディア",
-  "star": "4",
+  "star": 4,
   "element": "光",
   "type": "補助",
   "race": "人/機械",
@@ -195,7 +195,7 @@ const characters = [{
   "id": 13
 }, {
   "name": "パルフェ",
-  "star": "4",
+  "star": 4,
   "element": "光",
   "type": "剣士",
   "race": "人",
@@ -210,7 +210,7 @@ const characters = [{
   "id": 14
 }, {
   "name": "フィン",
-  "star": "4",
+  "star": 4,
   "element": "光",
   "type": "剣士",
   "race": "人",
@@ -225,7 +225,7 @@ const characters = [{
   "id": 15
 }, {
   "name": "フロレッタ",
-  "star": "4",
+  "star": 4,
   "element": "光",
   "type": "剣士",
   "race": "人/獣",
@@ -240,7 +240,7 @@ const characters = [{
   "id": 16
 }, {
   "name": "ホプル",
-  "star": "4",
+  "star": 4,
   "element": "光",
   "type": "射撃",
   "race": "人/機械",
@@ -255,7 +255,7 @@ const characters = [{
   "id": 17
 }, {
   "name": "ライア",
-  "star": "4",
+  "star": 4,
   "element": "光",
   "type": "格闘",
   "race": "人",
@@ -270,7 +270,7 @@ const characters = [{
   "id": 18
 }, {
   "name": "アウレオ",
-  "star": "3",
+  "star": 3,
   "element": "光",
   "type": "格闘",
   "race": "人/獣",
@@ -285,7 +285,7 @@ const characters = [{
   "id": 19
 }, {
   "name": "カロ",
-  "star": "3",
+  "star": 3,
   "element": "光",
   "type": "格闘",
   "race": "人/獣",
@@ -300,7 +300,7 @@ const characters = [{
   "id": 20
 }, {
   "name": "コリーナ",
-  "star": "3",
+  "star": 3,
   "element": "光",
   "type": "補助",
   "race": "人",
@@ -315,7 +315,7 @@ const characters = [{
   "id": 21
 }, {
   "name": "セシリア",
-  "star": "3",
+  "star": 3,
   "element": "光",
   "type": "剣士",
   "race": "人",
@@ -330,7 +330,7 @@ const characters = [{
   "id": 22
 }, {
   "name": "マルグリット",
-  "star": "3",
+  "star": 3,
   "element": "光",
   "type": "射撃",
   "race": "人",
@@ -345,7 +345,7 @@ const characters = [{
   "id": 23
 }, {
   "name": "ミレス",
-  "star": "3",
+  "star": 3,
   "element": "光",
   "type": "剣士",
   "race": "人",
@@ -360,7 +360,7 @@ const characters = [{
   "id": 24
 }, {
   "name": "ラウル",
-  "star": "3",
+  "star": 3,
   "element": "光",
   "type": "格闘",
   "race": "人",
@@ -375,7 +375,7 @@ const characters = [{
   "id": 25
 }, {
   "name": "リュリュカ",
-  "star": "3",
+  "star": 3,
   "element": "光",
   "type": "剣士",
   "race": "人",
@@ -390,7 +390,7 @@ const characters = [{
   "id": 26
 }, {
   "name": "エリヤ",
-  "star": "5",
+  "star": 5,
   "element": "水",
   "type": "射撃",
   "race": "人/精霊",
@@ -405,7 +405,7 @@ const characters = [{
   "id": 27
 }, {
   "name": "サイファ",
-  "star": "5",
+  "star": 5,
   "element": "水",
   "type": "射撃",
   "race": "人/精霊",
@@ -420,7 +420,7 @@ const characters = [{
   "id": 28
 }, {
   "name": "シレーヌ",
-  "star": "5",
+  "star": 5,
   "element": "水",
   "type": "射撃",
   "race": "人",
@@ -435,7 +435,7 @@ const characters = [{
   "id": 29
 }, {
   "name": "スイゼン",
-  "star": "5",
+  "star": 5,
   "element": "水",
   "type": "補助",
   "race": "人/妖",
@@ -450,7 +450,7 @@ const characters = [{
   "id": 30
 }, {
   "name": "ソーニャ",
-  "star": "5",
+  "star": 5,
   "element": "水",
   "type": "剣士",
   "race": "人",
@@ -465,7 +465,7 @@ const characters = [{
   "id": 31
 }, {
   "name": "ラキーシャ",
-  "star": "5",
+  "star": 5,
   "element": "水",
   "type": "補助",
   "race": "人/精霊",
@@ -480,7 +480,7 @@ const characters = [{
   "id": 32
 }, {
   "name": "リムニス",
-  "star": "5",
+  "star": 5,
   "element": "水",
   "type": "剣士",
   "race": "人",
@@ -495,7 +495,7 @@ const characters = [{
   "id": 33
 }, {
   "name": "アメリア",
-  "star": "4",
+  "star": 4,
   "element": "水",
   "type": "補助",
   "race": "人/水棲",
@@ -510,7 +510,7 @@ const characters = [{
   "id": 34
 }, {
   "name": "アリス",
-  "star": "4",
+  "star": 4,
   "element": "水",
   "type": "格闘",
   "race": "人/精霊",
@@ -525,7 +525,7 @@ const characters = [{
   "id": 35
 }, {
   "name": "ザール",
-  "star": "4",
+  "star": 4,
   "element": "水",
   "type": "特殊",
   "race": "人/水棲",
@@ -540,7 +540,7 @@ const characters = [{
   "id": 36
 }, {
   "name": "シャロン",
-  "star": "4",
+  "star": 4,
   "element": "水",
   "type": "格闘",
   "race": "人",
@@ -555,7 +555,7 @@ const characters = [{
   "id": 37
 }, {
   "name": "ソーヴィ",
-  "star": "4",
+  "star": 4,
   "element": "水",
   "type": "剣士",
   "race": "人",
@@ -570,7 +570,7 @@ const characters = [{
   "id": 38
 }, {
   "name": "ミズチ",
-  "star": "4",
+  "star": 4,
   "element": "水",
   "type": "特殊",
   "race": "人/妖",
@@ -585,7 +585,7 @@ const characters = [{
   "id": 39
 }, {
   "name": "モルディアーガ",
-  "star": "4",
+  "star": 4,
   "element": "水",
   "type": "格闘",
   "race": "人/精霊",
@@ -600,7 +600,7 @@ const characters = [{
   "id": 40
 }, {
   "name": "ユーウェル",
-  "star": "4",
+  "star": 4,
   "element": "水",
   "type": "剣士",
   "race": "人",
@@ -615,7 +615,7 @@ const characters = [{
   "id": 41
 }, {
   "name": "ラナー",
-  "star": "4",
+  "star": 4,
   "element": "水",
   "type": "剣士",
   "race": "人",
@@ -630,7 +630,7 @@ const characters = [{
   "id": 42
 }, {
   "name": "リーゼル",
-  "star": "4",
+  "star": 4,
   "element": "水",
   "type": "補助",
   "race": "人",
@@ -645,7 +645,7 @@ const characters = [{
   "id": 43
 }, {
   "name": "エルザ",
-  "star": "3",
+  "star": 3,
   "element": "水",
   "type": "補助",
   "race": "人",
@@ -660,7 +660,7 @@ const characters = [{
   "id": 44
 }, {
   "name": "カイユ",
-  "star": "3",
+  "star": 3,
   "element": "水",
   "type": "補助",
   "race": "人",
@@ -675,7 +675,7 @@ const characters = [{
   "id": 45
 }, {
   "name": "クラウス",
-  "star": "3",
+  "star": 3,
   "element": "水",
   "type": "格闘",
   "race": "人/獣",
@@ -690,7 +690,7 @@ const characters = [{
   "id": 46
 }, {
   "name": "クラーラ",
-  "star": "3",
+  "star": 3,
   "element": "水",
   "type": "剣士",
   "race": "人/獣",
@@ -705,7 +705,7 @@ const characters = [{
   "id": 47
 }, {
   "name": "ケイロス",
-  "star": "3",
+  "star": 3,
   "element": "水",
   "type": "射撃",
   "race": "人",
@@ -720,7 +720,7 @@ const characters = [{
   "id": 48
 }, {
   "name": "サマサ",
-  "star": "3",
+  "star": 3,
   "element": "水",
   "type": "補助",
   "race": "人/精霊",
@@ -735,7 +735,7 @@ const characters = [{
   "id": 49
 }, {
   "name": "シラノ",
-  "star": "3",
+  "star": 3,
   "element": "水",
   "type": "補助",
   "race": "妖",
@@ -750,7 +750,7 @@ const characters = [{
   "id": 50
 }, {
   "name": "チャルア",
-  "star": "3",
+  "star": 3,
   "element": "水",
   "type": "補助",
   "race": "精霊/植物",
@@ -765,7 +765,7 @@ const characters = [{
   "id": 51
 }, {
   "name": "トリスタ",
-  "star": "3",
+  "star": 3,
   "element": "水",
   "type": "剣士",
   "race": "人",
@@ -780,7 +780,7 @@ const characters = [{
   "id": 52
 }, {
   "name": "ファフ",
-  "star": "3",
+  "star": 3,
   "element": "水",
   "type": "補助",
   "race": "ドラゴン",
@@ -795,7 +795,7 @@ const characters = [{
   "id": 53
 }, {
   "name": "ラッティ",
-  "star": "3",
+  "star": 3,
   "element": "水",
   "type": "射撃",
   "race": "人",
@@ -810,7 +810,7 @@ const characters = [{
   "id": 54
 }, {
   "name": "リコ",
-  "star": "3",
+  "star": 3,
   "element": "水",
   "type": "剣士",
   "race": "人",
@@ -825,7 +825,7 @@ const characters = [{
   "id": 55
 }, {
   "name": "ヴァルター",
-  "star": "3",
+  "star": 3,
   "element": "水",
   "type": "格闘",
   "race": "人",
@@ -840,7 +840,7 @@ const characters = [{
   "id": 56
 }, {
   "name": "ブループル",
-  "star": "1",
+  "star": 1,
   "element": "水",
   "type": "格闘",
   "race": "精霊",
@@ -855,7 +855,7 @@ const characters = [{
   "id": 57
 }, {
   "name": "キクノ",
-  "star": "5",
+  "star": 5,
   "element": "火",
   "type": "格闘",
   "race": "人/妖",
@@ -870,7 +870,7 @@ const characters = [{
   "id": 58
 }, {
   "name": "クラリス",
-  "star": "5",
+  "star": 5,
   "element": "火",
   "type": "特殊",
   "race": "人/精霊",
@@ -885,7 +885,7 @@ const characters = [{
   "id": 59
 }, {
   "name": "ノエネ",
-  "star": "5",
+  "star": 5,
   "element": "火",
   "type": "補助",
   "race": "人/獣",
@@ -900,7 +900,7 @@ const characters = [{
   "id": 60
 }, {
   "name": "マリアンネ",
-  "star": "5",
+  "star": 5,
   "element": "火",
   "type": "射撃",
   "race": "人",
@@ -915,7 +915,7 @@ const characters = [{
   "id": 61
 }, {
   "name": "マリーナ",
-  "star": "5",
+  "star": 5,
   "element": "火",
   "type": "剣士",
   "race": "人",
@@ -930,7 +930,7 @@ const characters = [{
   "id": 62
 }, {
   "name": "ロルフ",
-  "star": "5",
+  "star": 5,
   "element": "火",
   "type": "剣士",
   "race": "人/獣",
@@ -945,7 +945,7 @@ const characters = [{
   "id": 63
 }, {
   "name": "ヴァーグナー",
-  "star": "5",
+  "star": 5,
   "element": "火",
   "type": "射撃",
   "race": "ドラゴン",
@@ -960,7 +960,7 @@ const characters = [{
   "id": 64
 }, {
   "name": "アスキリマル",
-  "star": "4",
+  "star": 4,
   "element": "火",
   "type": "格闘",
   "race": "人/妖",
@@ -975,7 +975,7 @@ const characters = [{
   "id": 65
 }, {
   "name": "アゼル",
-  "star": "4",
+  "star": 4,
   "element": "火",
   "type": "剣士",
   "race": "人",
@@ -990,7 +990,7 @@ const characters = [{
   "id": 66
 }, {
   "name": "アルク",
-  "star": "4",
+  "star": 4,
   "element": "火",
   "type": "剣士",
   "race": "人",
@@ -1005,7 +1005,7 @@ const characters = [{
   "id": 67
 }, {
   "name": "カノン",
-  "star": "4",
+  "star": 4,
   "element": "火",
   "type": "射撃",
   "race": "人",
@@ -1020,7 +1020,7 @@ const characters = [{
   "id": 68
 }, {
   "name": "キリ",
-  "star": "4",
+  "star": 4,
   "element": "火",
   "type": "射撃",
   "race": "人",
@@ -1035,7 +1035,7 @@ const characters = [{
   "id": 69
 }, {
   "name": "グライド",
-  "star": "4",
+  "star": 4,
   "element": "火",
   "type": "剣士",
   "race": "人",
@@ -1050,7 +1050,7 @@ const characters = [{
   "id": 70
 }, {
   "name": "ハナビ",
-  "star": "4",
+  "star": 4,
   "element": "火",
   "type": "格闘",
   "race": "人",
@@ -1065,7 +1065,7 @@ const characters = [{
   "id": 71
 }, {
   "name": "ビアンカ",
-  "star": "4",
+  "star": 4,
   "element": "火",
   "type": "補助",
   "race": "人",
@@ -1080,7 +1080,7 @@ const characters = [{
   "id": 72
 }, {
   "name": "ヘイズ",
-  "star": "4",
+  "star": 4,
   "element": "火",
   "type": "射撃",
   "race": "人",
@@ -1095,7 +1095,7 @@ const characters = [{
   "id": 73
 }, {
   "name": "リュリュカ",
-  "star": "4",
+  "star": 4,
   "element": "火",
   "type": "剣士",
   "race": "人",
@@ -1110,7 +1110,7 @@ const characters = [{
   "id": 74
 }, {
   "name": "レヴィ",
-  "star": "4",
+  "star": 4,
   "element": "火",
   "type": "剣士",
   "race": "人",
@@ -1125,7 +1125,7 @@ const characters = [{
   "id": 75
 }, {
   "name": "イリス",
-  "star": "3",
+  "star": 3,
   "element": "火",
   "type": "射撃",
   "race": "人",
@@ -1140,7 +1140,7 @@ const characters = [{
   "id": 76
 }, {
   "name": "エンニ",
-  "star": "3",
+  "star": 3,
   "element": "火",
   "type": "特殊",
   "race": "人",
@@ -1155,7 +1155,7 @@ const characters = [{
   "id": 77
 }, {
   "name": "ギルスラッド",
-  "star": "3",
+  "star": 3,
   "element": "火",
   "type": "剣士",
   "race": "人",
@@ -1170,7 +1170,7 @@ const characters = [{
   "id": 78
 }, {
   "name": "クラン",
-  "star": "3",
+  "star": 3,
   "element": "火",
   "type": "射撃",
   "race": "人/獣",
@@ -1185,7 +1185,7 @@ const characters = [{
   "id": 79
 }, {
   "name": "ジェイク",
-  "star": "3",
+  "star": 3,
   "element": "火",
   "type": "剣士",
   "race": "人",
@@ -1200,7 +1200,7 @@ const characters = [{
   "id": 80
 }, {
   "name": "ジン",
-  "star": "3",
+  "star": 3,
   "element": "火",
   "type": "補助",
   "race": "人",
@@ -1215,7 +1215,7 @@ const characters = [{
   "id": 81
 }, {
   "name": "トレーネ",
-  "star": "3",
+  "star": 3,
   "element": "火",
   "type": "剣士",
   "race": "人",
@@ -1230,7 +1230,7 @@ const characters = [{
   "id": 82
 }, {
   "name": "ハリシャ",
-  "star": "3",
+  "star": 3,
   "element": "火",
   "type": "補助",
   "race": "人",
@@ -1245,7 +1245,7 @@ const characters = [{
   "id": 83
 }, {
   "name": "ハーシュ",
-  "star": "3",
+  "star": 3,
   "element": "火",
   "type": "射撃",
   "race": "人",
@@ -1260,7 +1260,7 @@ const characters = [{
   "id": 84
 }, {
   "name": "メイミー",
-  "star": "3",
+  "star": 3,
   "element": "火",
   "type": "補助",
   "race": "人/精霊",
@@ -1275,7 +1275,7 @@ const characters = [{
   "id": 85
 }, {
   "name": "リリル",
-  "star": "3",
+  "star": 3,
   "element": "火",
   "type": "特殊",
   "race": "人",
@@ -1290,7 +1290,7 @@ const characters = [{
   "id": 86
 }, {
   "name": "ゴーレム",
-  "star": "2",
+  "star": 2,
   "element": "火",
   "type": "格闘",
   "race": "機械",
@@ -1305,7 +1305,7 @@ const characters = [{
   "id": 87
 }, {
   "name": "キノ",
-  "star": "1",
+  "star": 1,
   "element": "火",
   "type": "格闘",
   "race": "精霊/植物",
@@ -1320,7 +1320,7 @@ const characters = [{
   "id": 88
 }, {
   "name": "ファイアスピリ",
-  "star": "1",
+  "star": 1,
   "element": "火",
   "type": "補助",
   "race": "精霊",
@@ -1335,7 +1335,7 @@ const characters = [{
   "id": 89
 }, {
   "name": "レッドプル",
-  "star": "1",
+  "star": 1,
   "element": "火",
   "type": "格闘",
   "race": "精霊",
@@ -1350,13 +1350,13 @@ const characters = [{
   "id": 90
 }, {
   "name": "オリヴィエ",
-  "star": "5",
+  "star": 5,
   "element": "闇",
   "type": "剣士",
   "race": "人/精霊",
   "skill": "[一時停止]自身の正面に闇の斬撃を飛ばし、命中した敵に闇ダメージ(x16)+攻撃力ダウン(20%/20s)+鈍足効果(20s)/味方に貫通効果(12s)",
   "leader": "闇属性キャラの攻撃力+40%/パーティ全体が貫通効果中の間、闇属性キャラの攻撃力+80%",
-  "abilities": ["パーティに闇属性キャラを1体編成する度、自身の攻撃力+15%[最大+90%]", "30回自身が直接攻撃をする度、闇属性キャラの攻撃力+10%[最大+90%]", "メインキャラに編成時、パーティ全体が貫通効果中の間、自身の直接攻撃を3回にして、その合計ダメージを+50%"],
+  "abilities": ["パーティに闇属性キャラを1体編成する度、自身の攻撃力+15%[最大+90%]", "30回自身が直接攻撃をする度、闇属性キャラの攻撃力+10%[最大+60%]", "メインキャラに編成時、パーティ全体が貫通効果中の間、自身の直接攻撃を3回にして、その合計ダメージを+50%"],
   "sw": 620,
   "atk": 1007,
   "hp": 3627,
@@ -1365,7 +1365,7 @@ const characters = [{
   "id": 91
 }, {
   "name": "カーラ",
-  "star": "5",
+  "star": 5,
   "element": "闇",
   "type": "格闘",
   "race": "人/精霊",
@@ -1380,7 +1380,7 @@ const characters = [{
   "id": 92
 }, {
   "name": "ベルセティア",
-  "star": "5",
+  "star": 5,
   "element": "闇",
   "type": "射撃",
   "race": "人/精霊",
@@ -1395,7 +1395,7 @@ const characters = [{
   "id": 93
 }, {
   "name": "モルミア",
-  "star": "5",
+  "star": 5,
   "element": "闇",
   "type": "剣士",
   "race": "人/精霊",
@@ -1410,7 +1410,7 @@ const characters = [{
   "id": 94
 }, {
   "name": "ヴェロン",
-  "star": "5",
+  "star": 5,
   "element": "闇",
   "type": "剣士",
   "race": "人",
@@ -1425,7 +1425,7 @@ const characters = [{
   "id": 95
 }, {
   "name": "アルム",
-  "star": "4",
+  "star": 4,
   "element": "闇",
   "type": "格闘",
   "race": "魔",
@@ -1440,7 +1440,7 @@ const characters = [{
   "id": 96
 }, {
   "name": "アンディ",
-  "star": "4",
+  "star": 4,
   "element": "闇",
   "type": "特殊",
   "race": "人/不死",
@@ -1455,7 +1455,7 @@ const characters = [{
   "id": 97
 }, {
   "name": "クォーツァー",
-  "star": "4",
+  "star": 4,
   "element": "闇",
   "type": "剣士",
   "race": "人",
@@ -1470,7 +1470,7 @@ const characters = [{
   "id": 98
 }, {
   "name": "セルジール",
-  "star": "4",
+  "star": 4,
   "element": "闇",
   "type": "射撃",
   "race": "人",
@@ -1485,7 +1485,7 @@ const characters = [{
   "id": 99
 }, {
   "name": "マリアンネ",
-  "star": "4",
+  "star": 4,
   "element": "闇",
   "type": "射撃",
   "race": "人",
@@ -1500,7 +1500,7 @@ const characters = [{
   "id": 100
 }, {
   "name": "ユーウェル",
-  "star": "4",
+  "star": 4,
   "element": "闇",
   "type": "剣士",
   "race": "人",
@@ -1515,7 +1515,7 @@ const characters = [{
   "id": 101
 }, {
   "name": "ラヴ",
-  "star": "4",
+  "star": 4,
   "element": "闇",
   "type": "特殊",
   "race": "人/機械",
@@ -1530,7 +1530,7 @@ const characters = [{
   "id": 102
 }, {
   "name": "リアン",
-  "star": "4",
+  "star": 4,
   "element": "闇",
   "type": "射撃",
   "race": "人/精霊",
@@ -1545,7 +1545,7 @@ const characters = [{
   "id": 103
 }, {
   "name": "ルナ",
-  "star": "4",
+  "star": 4,
   "element": "闇",
   "type": "特殊",
   "race": "人/不死",
@@ -1560,7 +1560,7 @@ const characters = [{
   "id": 104
 }, {
   "name": "アディル",
-  "star": "3",
+  "star": 3,
   "element": "闇",
   "type": "剣士",
   "race": "人",
@@ -1575,7 +1575,7 @@ const characters = [{
   "id": 105
 }, {
   "name": "アーリィ",
-  "star": "3",
+  "star": 3,
   "element": "闇",
   "type": "格闘",
   "race": "魔",
@@ -1590,7 +1590,7 @@ const characters = [{
   "id": 106
 }, {
   "name": "シオン",
-  "star": "3",
+  "star": 3,
   "element": "闇",
   "type": "剣士",
   "race": "人",
@@ -1605,7 +1605,7 @@ const characters = [{
   "id": 107
 }, {
   "name": "ジャリル",
-  "star": "3",
+  "star": 3,
   "element": "闇",
   "type": "射撃",
   "race": "人",
@@ -1620,7 +1620,7 @@ const characters = [{
   "id": 108
 }, {
   "name": "ドロセア",
-  "star": "3",
+  "star": 3,
   "element": "闇",
   "type": "補助",
   "race": "人",
@@ -1635,7 +1635,7 @@ const characters = [{
   "id": 109
 }, {
   "name": "ノーセル",
-  "star": "3",
+  "star": 3,
   "element": "闇",
   "type": "剣士",
   "race": "人",
@@ -1650,7 +1650,7 @@ const characters = [{
   "id": 110
 }, {
   "name": "ファルチェ",
-  "star": "3",
+  "star": 3,
   "element": "闇",
   "type": "剣士",
   "race": "人",
@@ -1665,7 +1665,7 @@ const characters = [{
   "id": 111
 }, {
   "name": "メリル",
-  "star": "3",
+  "star": 3,
   "element": "闇",
   "type": "補助",
   "race": "人",
@@ -1680,7 +1680,7 @@ const characters = [{
   "id": 112
 }, {
   "name": "レベッカ",
-  "star": "3",
+  "star": 3,
   "element": "闇",
   "type": "補助",
   "race": "人/獣",
@@ -1695,7 +1695,7 @@ const characters = [{
   "id": 113
 }, {
   "name": "イナホ",
-  "star": "5",
+  "star": 5,
   "element": "雷",
   "type": "特殊",
   "race": "妖",
@@ -1710,7 +1710,7 @@ const characters = [{
   "id": 114
 }, {
   "name": "カリオストロ",
-  "star": "5",
+  "star": 5,
   "element": "雷",
   "type": "補助",
   "race": "人/精霊",
@@ -1725,7 +1725,7 @@ const characters = [{
   "id": 115
 }, {
   "name": "セラ",
-  "star": "5",
+  "star": 5,
   "element": "雷",
   "type": "射撃",
   "race": "人/機械",
@@ -1740,7 +1740,7 @@ const characters = [{
   "id": 116
 }, {
   "name": "ソウシロウ",
-  "star": "5",
+  "star": 5,
   "element": "雷",
   "type": "剣士",
   "race": "人",
@@ -1755,7 +1755,7 @@ const characters = [{
   "id": 117
 }, {
   "name": "バラク",
-  "star": "5",
+  "star": 5,
   "element": "雷",
   "type": "格闘",
   "race": "人",
@@ -1770,7 +1770,7 @@ const characters = [{
   "id": 118
 }, {
   "name": "ボタン",
-  "star": "5",
+  "star": 5,
   "element": "雷",
   "type": "射撃",
   "race": "人",
@@ -1785,7 +1785,7 @@ const characters = [{
   "id": 119
 }, {
   "name": "メーティス",
-  "star": "5",
+  "star": 5,
   "element": "雷",
   "type": "射撃",
   "race": "人",
@@ -1800,7 +1800,7 @@ const characters = [{
   "id": 120
 }, {
   "name": "アウレオ",
-  "star": "4",
+  "star": 4,
   "element": "雷",
   "type": "格闘",
   "race": "人/獣",
@@ -1815,7 +1815,7 @@ const characters = [{
   "id": 121
 }, {
   "name": "アドーニ",
-  "star": "4",
+  "star": 4,
   "element": "雷",
   "type": "剣士",
   "race": "人",
@@ -1830,7 +1830,7 @@ const characters = [{
   "id": 122
 }, {
   "name": "エレンノール",
-  "star": "4",
+  "star": 4,
   "element": "雷",
   "type": "剣士",
   "race": "人/精霊",
@@ -1845,7 +1845,7 @@ const characters = [{
   "id": 123
 }, {
   "name": "ジェイ",
-  "star": "4",
+  "star": 4,
   "element": "雷",
   "type": "補助",
   "race": "人/獣",
@@ -1860,7 +1860,7 @@ const characters = [{
   "id": 124
 }, {
   "name": "プリカ",
-  "star": "4",
+  "star": 4,
   "element": "雷",
   "type": "格闘",
   "race": "人/精霊",
@@ -1875,7 +1875,7 @@ const characters = [{
   "id": 125
 }, {
   "name": "ミノ",
-  "star": "4",
+  "star": 4,
   "element": "雷",
   "type": "格闘",
   "race": "人/獣",
@@ -1890,7 +1890,7 @@ const characters = [{
   "id": 126
 }, {
   "name": "ラムス",
-  "star": "4",
+  "star": 4,
   "element": "雷",
   "type": "特殊",
   "race": "ドラゴン",
@@ -1905,7 +1905,7 @@ const characters = [{
   "id": 127
 }, {
   "name": "ルディ",
-  "star": "4",
+  "star": 4,
   "element": "雷",
   "type": "特殊",
   "race": "人/機械",
@@ -1920,7 +1920,7 @@ const characters = [{
   "id": 128
 }, {
   "name": "ルナール",
-  "star": "4",
+  "star": 4,
   "element": "雷",
   "type": "特殊",
   "race": "人/獣",
@@ -1935,7 +1935,7 @@ const characters = [{
   "id": 129
 }, {
   "name": "レジス",
-  "star": "4",
+  "star": 4,
   "element": "雷",
   "type": "射撃",
   "race": "人/機械",
@@ -1950,7 +1950,7 @@ const characters = [{
   "id": 130
 }, {
   "name": "アルベルト",
-  "star": "3",
+  "star": 3,
   "element": "雷",
   "type": "剣士",
   "race": "人/獣",
@@ -1965,7 +1965,7 @@ const characters = [{
   "id": 131
 }, {
   "name": "カヅチ",
-  "star": "3",
+  "star": 3,
   "element": "雷",
   "type": "格闘",
   "race": "人/妖",
@@ -1980,7 +1980,7 @@ const characters = [{
   "id": 132
 }, {
   "name": "クロ",
-  "star": "3",
+  "star": 3,
   "element": "雷",
   "type": "格闘",
   "race": "人/獣",
@@ -1995,7 +1995,7 @@ const characters = [{
   "id": 133
 }, {
   "name": "コルト",
-  "star": "3",
+  "star": 3,
   "element": "雷",
   "type": "補助",
   "race": "人",
@@ -2010,7 +2010,7 @@ const characters = [{
   "id": 134
 }, {
   "name": "シャ・スス",
-  "star": "3",
+  "star": 3,
   "element": "雷",
   "type": "補助",
   "race": "人",
@@ -2025,7 +2025,7 @@ const characters = [{
   "id": 135
 }, {
   "name": "タイガ",
-  "star": "3",
+  "star": 3,
   "element": "雷",
   "type": "格闘",
   "race": "人/精霊",
@@ -2040,7 +2040,7 @@ const characters = [{
   "id": 136
 }, {
   "name": "タチアナ",
-  "star": "3",
+  "star": 3,
   "element": "雷",
   "type": "剣士",
   "race": "人",
@@ -2055,7 +2055,7 @@ const characters = [{
   "id": 137
 }, {
   "name": "バルゲン",
-  "star": "3",
+  "star": 3,
   "element": "雷",
   "type": "剣士",
   "race": "人",
@@ -2070,7 +2070,7 @@ const characters = [{
   "id": 138
 }, {
   "name": "フォウラ",
-  "star": "3",
+  "star": 3,
   "element": "雷",
   "type": "補助",
   "race": "人",
@@ -2085,7 +2085,7 @@ const characters = [{
   "id": 139
 }, {
   "name": "ホーニィ",
-  "star": "3",
+  "star": 3,
   "element": "雷",
   "type": "射撃",
   "race": "獣",
@@ -2100,7 +2100,7 @@ const characters = [{
   "id": 140
 }, {
   "name": "ミュウ",
-  "star": "3",
+  "star": 3,
   "element": "雷",
   "type": "格闘",
   "race": "人/獣",
@@ -2115,7 +2115,7 @@ const characters = [{
   "id": 141
 }, {
   "name": "ユナ",
-  "star": "3",
+  "star": 3,
   "element": "雷",
   "type": "剣士",
   "race": "人",
@@ -2130,7 +2130,7 @@ const characters = [{
   "id": 142
 }, {
   "name": "イエロープル",
-  "star": "1",
+  "star": 1,
   "element": "雷",
   "type": "格闘",
   "race": "精霊",
@@ -2145,7 +2145,7 @@ const characters = [{
   "id": 143
 }, {
   "name": "パララット",
-  "star": "2",
+  "star": 2,
   "element": "雷",
   "type": "射撃",
   "race": "獣",
@@ -2160,7 +2160,7 @@ const characters = [{
   "id": 144
 }, {
   "name": "シウエ",
-  "star": "5",
+  "star": 5,
   "element": "風",
   "type": "補助",
   "race": "人/精霊",
@@ -2175,7 +2175,7 @@ const characters = [{
   "id": 145
 }, {
   "name": "シルティー",
-  "star": "5",
+  "star": 5,
   "element": "風",
   "type": "剣士",
   "race": "人",
@@ -2190,7 +2190,7 @@ const characters = [{
   "id": 146
 }, {
   "name": "フィリア",
-  "star": "5",
+  "star": 5,
   "element": "風",
   "type": "補助",
   "race": "人/精霊",
@@ -2205,7 +2205,7 @@ const characters = [{
   "id": 147
 }, {
   "name": "ミゲル",
-  "star": "5",
+  "star": 5,
   "element": "風",
   "type": "特殊",
   "race": "人",
@@ -2220,7 +2220,7 @@ const characters = [{
   "id": 148
 }, {
   "name": "ムラクモ",
-  "star": "5",
+  "star": 5,
   "element": "風",
   "type": "剣士",
   "race": "精霊/不死",
@@ -2235,7 +2235,7 @@ const characters = [{
   "id": 149
 }, {
   "name": "レオン",
-  "star": "5",
+  "star": 5,
   "element": "風",
   "type": "剣士",
   "race": "人",
@@ -2250,7 +2250,7 @@ const characters = [{
   "id": 150
 }, {
   "name": "アリサ",
-  "star": "4",
+  "star": 4,
   "element": "風",
   "type": "射撃",
   "race": "人/精霊",
@@ -2265,7 +2265,7 @@ const characters = [{
   "id": 151
 }, {
   "name": "オロウル",
-  "star": "4",
+  "star": 4,
   "element": "風",
   "type": "剣士",
   "race": "人/獣",
@@ -2280,7 +2280,7 @@ const characters = [{
   "id": 152
 }, {
   "name": "コハネ",
-  "star": "4",
+  "star": 4,
   "element": "風",
   "type": "射撃",
   "race": "人",
@@ -2295,7 +2295,7 @@ const characters = [{
   "id": 153
 }, {
   "name": "シロ",
-  "star": "4",
+  "star": 4,
   "element": "風",
   "type": "格闘",
   "race": "人/獣",
@@ -2310,7 +2310,7 @@ const characters = [{
   "id": 154
 }, {
   "name": "スズカ",
-  "star": "4",
+  "star": 4,
   "element": "風",
   "type": "剣士",
   "race": "人",
@@ -2325,7 +2325,7 @@ const characters = [{
   "id": 155
 }, {
   "name": "ソウシロウ",
-  "star": "4",
+  "star": 4,
   "element": "風",
   "type": "剣士",
   "race": "人",
@@ -2340,7 +2340,7 @@ const characters = [{
   "id": 156
 }, {
   "name": "ヘルガ",
-  "star": "4",
+  "star": 4,
   "element": "風",
   "type": "格闘",
   "race": "人/獣",
@@ -2355,7 +2355,7 @@ const characters = [{
   "id": 157
 }, {
   "name": "ミア",
-  "star": "4",
+  "star": 4,
   "element": "風",
   "type": "格闘",
   "race": "人/獣",
@@ -2370,7 +2370,7 @@ const characters = [{
   "id": 158
 }, {
   "name": "メルスール",
-  "star": "4",
+  "star": 4,
   "element": "風",
   "type": "射撃",
   "race": "人/精霊",
@@ -2385,7 +2385,7 @@ const characters = [{
   "id": 159
 }, {
   "name": "ルー",
-  "star": "4",
+  "star": 4,
   "element": "風",
   "type": "剣士",
   "race": "人/獣",
@@ -2400,7 +2400,7 @@ const characters = [{
   "id": 160
 }, {
   "name": "レベッカ",
-  "star": "4",
+  "star": 4,
   "element": "風",
   "type": "補助",
   "race": "人/獣",
@@ -2415,7 +2415,7 @@ const characters = [{
   "id": 161
 }, {
   "name": "エヴァン",
-  "star": "3",
+  "star": 3,
   "element": "風",
   "type": "剣士",
   "race": "人",
@@ -2430,7 +2430,7 @@ const characters = [{
   "id": 162
 }, {
   "name": "ケイト",
-  "star": "3",
+  "star": 3,
   "element": "風",
   "type": "剣士",
   "race": "人",
@@ -2445,7 +2445,7 @@ const characters = [{
   "id": 163
 }, {
   "name": "コナー",
-  "star": "3",
+  "star": 3,
   "element": "風",
   "type": "剣士",
   "race": "人",
@@ -2460,7 +2460,7 @@ const characters = [{
   "id": 164
 }, {
   "name": "ジャスター",
-  "star": "3",
+  "star": 3,
   "element": "風",
   "type": "格闘",
   "race": "人",
@@ -2475,7 +2475,7 @@ const characters = [{
   "id": 165
 }, {
   "name": "チャルア",
-  "star": "3",
+  "star": 3,
   "element": "風",
   "type": "補助",
   "race": "精霊/植物",
@@ -2490,7 +2490,7 @@ const characters = [{
   "id": 166
 }, {
   "name": "ネスカ",
-  "star": "3",
+  "star": 3,
   "element": "風",
   "type": "剣士",
   "race": "人",
@@ -2505,7 +2505,7 @@ const characters = [{
   "id": 167
 }, {
   "name": "ハートリーフ",
-  "star": "3",
+  "star": 3,
   "element": "風",
   "type": "補助",
   "race": "人",
@@ -2520,7 +2520,7 @@ const characters = [{
   "id": 168
 }, {
   "name": "フォルス",
-  "star": "3",
+  "star": 3,
   "element": "風",
   "type": "射撃",
   "race": "魔",
@@ -2535,7 +2535,7 @@ const characters = [{
   "id": 169
 }, {
   "name": "ミュウ",
-  "star": "3",
+  "star": 3,
   "element": "風",
   "type": "格闘",
   "race": "人/獣",
@@ -2550,7 +2550,7 @@ const characters = [{
   "id": 170
 }, {
   "name": "レシタール",
-  "star": "3",
+  "star": 3,
   "element": "風",
   "type": "補助",
   "race": "不死",
@@ -2565,7 +2565,7 @@ const characters = [{
   "id": 171
 }, {
   "name": "C・F・キセキ",
-  "star": "2",
+  "star": 2,
   "element": "風",
   "type": "射撃",
   "race": "機械",
@@ -2580,7 +2580,7 @@ const characters = [{
   "id": 172
 }, {
   "name": "カマイタチ",
-  "star": "2",
+  "star": 2,
   "element": "風",
   "type": "射撃",
   "race": "妖/獣",
@@ -2595,7 +2595,7 @@ const characters = [{
   "id": 173
 }, {
   "name": "ポジート",
-  "star": "2",
+  "star": 2,
   "element": "風",
   "type": "補助",
   "race": "獣",
@@ -2610,7 +2610,7 @@ const characters = [{
   "id": 174
 }, {
   "name": "斗和キセキ",
-  "star": "2",
+  "star": 2,
   "element": "風",
   "type": "格闘",
   "race": "人",
@@ -2625,7 +2625,7 @@ const characters = [{
   "id": 175
 }, {
   "name": "グリーンプル",
-  "star": "1",
+  "star": 1,
   "element": "風",
   "type": "格闘",
   "race": "精霊",
@@ -2638,4 +2638,95 @@ const characters = [{
   "hit": 1,
   "nickname": "風のぷるぷる",
   "id": 176
-}];
+}, {
+  "nickname": "旅の腹ペコ剣士",
+  "name": "ペコリーヌ",
+  "star": 5,
+  "element": "光",
+  "type": "剣士",
+  "race": "人",
+  "skill": "[立ち止まる]渾身の3連撃を繰り出し、自身の周囲の敵に光ダメージ(x18)/自身に再生(150/10s)+全属性耐性アップ効果(25%/15s)",
+  "leader": "光属性キャラの攻撃力+50%/光属性キャラがHP60%以上の間、そのキャラの攻撃力+55%",
+  "abilities": ["30回自身が直接攻撃をする度、10秒間自身の全属性耐性+20%＆計10回まで最大HPの4%回復","自身のHP+10%/自身がHP60%以上の間、自身の攻撃力+40%","メインキャラに編成時、自身がスキルを発動する度、自身に最大HPの12%のバリアを張る/メインキャラ編成時、自身がHP80%以上の間、自身の攻撃力+120%"],
+  "sw": 480,
+  "hp": 5305,
+  "atk": 630,
+  "hit": 3,
+  "id": 177
+}, {
+  "nickname": "ネコミミ魔法使い",
+  "name": "キャル",
+  "star": 5,
+  "element": "闇",
+  "type": "特殊",
+  "race": "人/獣",
+  "skill": "[立ち止まる]フィールド全体に闇ダメージ(x21.6)",
+  "leader": "闇属性キャラのスキルダメージ+70%/2回敵を撃破する度、闇属性キャラのスキルダメージ+8%[最大+120%]",
+  "abilities": ["バトル開始時、60秒間自身のスキルダメージ+60%＆スキルダメージ+60%","2回敵を撃破する度、自身のスキルダメージ+12%[最大+180%]","メインキャラに編成時、自身のスキルダメージが500%以上アップしている間、自身のスキルダメージ+200%"],
+  "sw": 500,
+  "hp": 3479,
+  "atk": 992,
+  "hit": 1,
+  "id": 178
+}, {
+  "nickname": "小さなガイド役",
+  "name": "コッコロ",
+  "star": 5,
+  "element": "風",
+  "type": "補助",
+  "race": "人/精霊",
+  "skill": "自身のHPを回復(10%)【風属性キャラに対して効果アップ(50%)】/風属性キャラに攻撃力アップ(60%/15s)/リーダーが風属性の時、味方にスピードアップ効果(40%/12s)",
+  "leader": "バトル開始時、風属性キャラのスキルゲージ+50%＆攻撃力+50%",
+  "abilities": ["リーダーの攻撃力+50%","リーダーの受ける回復量+15%/3番目のキャラのスキルダメージ+50%","メインキャラに編成時、パーティ全体がスピードアップ効果中の間、風属性キャラの直接攻撃ダメージ+150%"],
+  "sw": 600,
+  "hp": 4218,
+  "atk": 844,
+  "hit": 0,
+  "id": 179
+}, {
+  "nickname": "内気な武術家",
+  "name": "ミルミナ",
+  "star": 4,
+  "element": "火",
+  "type": "剣士",
+  "race": "人",
+  "skill": "[低速突進]最も近い敵に向かって神速の突きで奇襲し、進行方向の敵に火ダメージ(x20)/味方に貫通効果(10s)",
+  "leader": "火属性キャラの攻撃力+30%/パーティ全体が貫通効果中の間、火属性キャラの攻撃力+45%",
+  "abilities": ["自身がスキルを発動する度、火属性キャラの攻撃力+15%[最大+45%]","5回敵を撃破する度、自身の攻撃力+6%[最大+60%]","メインキャラに編成時、パーティ全体が貫通効果中の間、火属性キャラの攻撃力+60%"],
+  "sw": 590,
+  "hp": 3624,
+  "atk": 847,
+  "hit": 12,
+  "id": 180
+}, {
+  "nickname": "虎を追うネズミ",
+  "name": "スヴェン",
+  "star": 3,
+  "element": "火",
+  "type": "剣士",
+  "race": "人/獣",
+  "skill": "[低速突進]最も近い敵に向かって突進し、進行方向の敵に火ダメージ(x15.75)",
+  "leader": "パーティに種族「獣」キャラを1体編成する度、パワーフリップダメージ+17.5%[最大+105%]",
+  "abilities": ["自身が種族「獣」キャラである時、バトル開始時、自身のスキルゲージ+80%","自身がスキルを発動する度、パワーフリップダメージ+15%[最大+45%]","メインキャラに編成時、パワーフリップLv3に必要なコンボ数-2/メインキャラに編成時、パワーフリップLv3を発動する度、パワーフリップダメージ+8%[最大+40%]"],
+  "sw": 510,
+  "hp": 3622,
+  "atk": 760,
+  "hit": 15,
+  "id": 181
+}, {
+  "nickname": "",
+  "name": "",
+  "star": "",
+  "element": "",
+  "type": "",
+  "race": "",
+  "skill": "",
+  "leader": "",
+  "abilities": ["","","メインキャラに編成時、"],
+  "sw": 0,
+  "hp": 0,
+  "atk": 0,
+  "hit": 0,
+  "id": -1
+}
+];

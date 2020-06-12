@@ -159,8 +159,8 @@ function exec() {
   $resultCount.empty();
   $('#conditions').accordion('option', {'active': false});
 
-  let searchFixed = $('#cond-search').val().replace('＋', '+').replace('－', '-')
-    .replace('／', '/');
+  let searchFixed = $('#cond-search').val().replace(/＋/g, '+').replace(/－/g, '-')
+    .replace(/／/g, '/').replace(/％/g, '%').replace(/　/g, ' ').split(' ');
 
   const filters = {
     name: $('#cond-name').val().trim(),
@@ -177,7 +177,7 @@ function exec() {
       $('#cond-a1').prop('checked'),
       $('#cond-a2').prop('checked'),
       $('#cond-a3').prop('checked')
-    ],
+    ]
   };
 
   const shows = {
@@ -197,16 +197,21 @@ function exec() {
     ]
   };
 
-  let count = 0;
   let timeUsed = Date.now();
+  let chars = [];
   for (let i in characters) {
     const char = characters[i];
     if (valid(char, filters)) {
-      $result.append(makeResultEntry(char, shows, searchFixed));
-      count++;
+      chars.push(char);
     }
   }
-  $resultCount.html(`${count} 件 (${((Date.now() - timeUsed) / 1000.0).toFixed(2)} 秒)`);
+
+  chars = sortChars(chars);
+  for (let i in chars) {
+    $result.append(makeResultEntry(chars[i], shows, searchFixed));
+  }
+
+  $resultCount.html(`${chars.length} 件 (${((Date.now() - timeUsed) / 1000.0).toFixed(2)} 秒)`);
 }
 
 function valid(char, filters) {
@@ -270,7 +275,6 @@ function valid(char, filters) {
   }
 
   // スキアビ検索
-  let found = false;
   const targets = [
     char.skill,
     char.leader,
@@ -278,17 +282,38 @@ function valid(char, filters) {
     char.abilities[1],
     char.abilities[2]
   ];
+  let found = false;
   for (let j = 0; j < filters.searchIn.length; j++) {
-    if (filters.searchIn[j] && targets[j] && targets[j].indexOf(filters.search) >= 0) {
-      found = true;
-      break;
+    if (filters.searchIn[j] && targets[j]) {
+      let allFound = true;
+      for (let k = 0; k < filters.search.length; k++) {
+        if (targets[j].indexOf(filters.search[k]) < 0
+      )
+        {
+          allFound = false;
+          break;
+        }
+      }
+      if (allFound) {
+        found = true;
+      }
     }
   }
-  if (!found) {
-    return false;
-  }
+  return found;
+}
 
-  return true;
+function sortChars(chars) {
+  // デフォルト順：属性→レアリティ→名前
+  chars.sort((a, b) => {
+    if (a.element !== b.element) {
+      return a.element < b.element ? -1 : 1;
+    }
+    if (a.star !== b.star) {
+      return b.star < a.star ? -1 : 1;
+    }
+    return a.name < b.name ? -1 : 1;
+  });
+  return chars;
 }
 
 function makeResultEntry(char, shows, search) {
@@ -340,7 +365,7 @@ function makeResultEntry(char, shows, search) {
   }
   const $line3 = $('<p></p>');
   if (shows.ls && char.leader.length > 0) {
-    const [ html, found ] = emphasizeSearch(char.leader, search);
+    const [html, found] = emphasizeSearch(char.leader, search);
     $line3.append(`<table class="line3 ${found ? 'search-found' : ''}"><tr>
       <td>
         <div class="decoration">リーダー特性</div>
@@ -351,7 +376,7 @@ function makeResultEntry(char, shows, search) {
   }
   const $skillTable = $(`<table class="line3"></table>`);
   if (shows.skillDesc) {
-    const [ html, found ] = emphasizeSearch(char.skill, search);
+    const [html, found] = emphasizeSearch(char.skill, search);
     if (found) {
       $skillTable.addClass('search-found');
     }
@@ -380,7 +405,7 @@ function makeResultEntry(char, shows, search) {
   $line3.append($skillTable);
   for (let i = 0; i < char.abilities.length; i++) {
     if (char.abilities[i] && shows.abilities[i]) {
-      const [ html, found ] = emphasizeSearch(char.abilities[i], search);
+      const [html, found] = emphasizeSearch(char.abilities[i], search);
       $line3.append($(`<table class="line3 ${found ? 'search-found' : ''}"><tr>
         <td>
           <div class="decoration">アビリティ${i + 1}</div>
@@ -394,10 +419,18 @@ function makeResultEntry(char, shows, search) {
 }
 
 function emphasizeSearch(text, search) {
-  if (search.length == 0 || text.indexOf(search) < 0) {
-    return [text, false];
+  let origin = text;
+  let allFound = true;
+  for (let i = 0; i < search.length; i++) {
+    if (search[i].length > 0 && text.indexOf(search[i]) >= 0) {
+      text = text.replace(new RegExp(escapeRegExp(search[i]), 'g'),
+        `<span class="searched-text">${search[i]}</span>`);
+    } else {
+      allFound = false;
+      break;
+    }
   }
-  return [text.replace(new RegExp(escapeRegExp(search), 'g'), `<span class="searched-text">${search}</span>`), true];
+  return [allFound ? text : origin, allFound];
 }
 
 function escapeRegExp(string) {
