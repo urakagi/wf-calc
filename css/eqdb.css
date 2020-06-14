@@ -1,0 +1,119 @@
+#conditions {
+    max-width: 610px;
+}
+
+.cond-label {
+    color: darkgray;
+    font-size: small;
+}
+
+#conditions input {
+    padding: 5px 4px;
+}
+
+#exec {
+    font-size: large;
+}
+
+#conditions input[type=checkbox] {
+    vertical-align: middle;
+}
+
+#conditions label {
+    vertical-align: middle;
+}
+
+.cond-element {
+    display: none;
+}
+
+.cond-elements img {
+    height: 30px;
+    width: 30px;
+    margin-left: 3px;
+}
+
+.cond-rarity {
+    display: none;
+}
+
+.result-entry {
+    padding-bottom: 5px;
+}
+
+.line1 {
+    width: 100%;
+    max-width: 480px;
+    border: 1px solid black;
+    padding-right: 5px;
+}
+
+.eq-pic {
+    height: 80px;
+    width: 80px;
+    padding-bottom: 0;
+    display: block;
+}
+
+.names {
+    padding-left: 5px;
+}
+
+.name {
+    font-size: large;
+    font-weight: bold;
+}
+
+.element {
+    height: 30px;
+    width: 30px;
+}
+
+.eq-source {
+    width: auto;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.line2 {
+    width: 100%;
+    max-width: 480px;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    text-align: center;
+}
+
+.star {
+    width: 70px;
+    margin-top: 5px;
+}
+
+.line3 {
+    max-width: 600px;
+    border-bottom: black solid 1px;
+}
+
+.search-found {
+    border-left: darkred solid 5px;
+}
+
+.searched-text {
+    font-weight: bold;
+    color: darkred;
+}
+
+.execLine {
+    max-width: 600px;
+}
+
+.description {
+    border-left: darkgray 1px double;
+    border-right: darkgray 1px double;
+    white-space: nowrap;
+}
+
+.decoration {
+    font-size: small;
+    color: darkgray;
+}

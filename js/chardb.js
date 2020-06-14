@@ -12,12 +12,13 @@ $().ready(() => {
   });
 
   initCheckboxes();
+  $('#cond-name').focus();
 });
 
 function initCheckboxes() {
   // 属性、タイプ絞り込みチェックボックス処理
-  const allChecks = [$('#cond-all-elements'), $('#cond-all-types')];
-  const allImgs = [$('.cond-element'), $('.cond-type')];
+  const allChecks = [$('#cond-all-elements'), $('#cond-all-types'), $('#cond-all-rarities')];
+  const allImgs = [$('.cond-element'), $('.cond-type'), $('.cond-rarity')];
 
   for (let task = 0; task < allChecks.length; task++) {
     const $all = allChecks[task];
@@ -46,10 +47,10 @@ function initCheckboxes() {
         $label.css('filter', 'opacity(1)');
       } else {
         $all.prop('checked', false);
-        if (task === 0) {
-          $label.css('filter', 'opacity(0.3) grayscale(1)');
-        } else {
+        if (task === 1) {
           $label.css('filter', 'opacity(0.2)');
+        } else {
+          $label.css('filter', 'opacity(0.3) grayscale(1)');
         }
       }
       let allUnchecked = true;
@@ -62,13 +63,6 @@ function initCheckboxes() {
         }
       }
       $all.prop('checked', allChecked);
-
-      // 全て外すは意味がないので、全て戻すに変更
-      if (allUnchecked) {
-        $all.prop('checked', true);
-        $boxes.prop('checked', true);
-        $boxes.change();
-      }
     });
   }
 
@@ -89,33 +83,6 @@ function initCheckboxes() {
       }
     }
     $allRaces.prop('checked', allChecked);
-  });
-
-  // レアリティチェックボックス処理
-  const $rarities = $('.cond-rarity');
-  const $allRarities = $('#cond-all-rarities');
-
-  $allRarities.on('change', function () {
-    $rarities.prop('checked', $(this).prop('checked'));
-    $rarities.change();
-  });
-
-  $rarities.on('change', function () {
-    const $this = $(this);
-    const $label = $(`label[for=${this.id}]`);
-    if ($this.prop('checked')) {
-      $label.css('filter', 'opacity(1)');
-    } else {
-      $label.css('filter', 'opacity(0.3) grayscale(1)');
-    }
-    let allChecked = true;
-    for (let i = 0; i < $rarities.length; i++) {
-      if (!$rarities.eq(i).prop('checked')) {
-        allChecked = false;
-        break;
-      }
-    }
-    $allRarities.prop('checked', allChecked);
   });
 
   // スキアビ絞り込みチェックボックス処理
@@ -226,7 +193,7 @@ function valid(char, filters) {
   if (!filters.$element.eq(ELEMENTS.indexOf(char.element)).prop('checked')) {
     return false;
   }
-  if (!filters.$type.eq(TYPES.indexOf(char.type)).prop('checked')) {
+  if (!filters.$type.eq(PF_TYPES.indexOf(char.type)).prop('checked')) {
     return false;
   }
   const races = char.race.split('/');
@@ -306,7 +273,7 @@ function sortChars(chars) {
   // デフォルト順：属性→レアリティ→名前
   chars.sort((a, b) => {
     if (a.element !== b.element) {
-      return a.element < b.element ? -1 : 1;
+      return ELEMENTS.indexOf(a.element) < ELEMENTS.indexOf(b.element) ? -1 : 1;
     }
     if (a.star !== b.star) {
       return b.star < a.star ? -1 : 1;
@@ -433,10 +400,6 @@ function emphasizeSearch(text, search) {
   return [allFound ? text : origin, allFound];
 }
 
-function escapeRegExp(string) {
-  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
-}
-
 function reset() {
   $('input').val('');
   $('input[type=checkbox]').prop('checked', true);
@@ -446,4 +409,5 @@ function reset() {
   $('#resultCount').empty();
   $('#conditions').accordion('option', {'active': false});
   $('#conditions h3:eq(0)').click();
+  $('#cond-name').focus();
 }

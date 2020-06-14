@@ -1,8 +1,10 @@
 const ELEMENTS = ['火', '水', '雷', '風', '光', '闇'];
 
-const TYPES = ['格闘', '剣士', '射撃', '補助', '特殊'];
+const PF_TYPES = ['格闘', '剣士', '射撃', '補助', '特殊'];
 
 const RACES = ['人', '精霊', '獣', '機械', '妖', '不死', '魔', 'ドラゴン', '植物', '水棲'];
+
+const EQUIP_TYPES = ['オーブ', 'トロフィー', '剣', '斧', '槍', '弓', '書', '杖', 'ナックル', '盾', 'アクセ', '銃'];
 
 const ELEMENT_PICS = {
   '火': 'img/fire.png',
@@ -10,7 +12,7 @@ const ELEMENT_PICS = {
   '雷': 'img/thunder.png',
   '風': 'img/wind.png',
   '光': 'img/light.png',
-  '闇': 'img/dark.png',
+  '闇': 'img/dark.png'
 };
 
 const TYPE_PICS = {
@@ -18,7 +20,7 @@ const TYPE_PICS = {
   '射撃': 'img/shoot.png',
   '格闘': 'img/melee.png',
   '補助': 'img/assist.png',
-  '特殊': 'img/special.png',
+  '特殊': 'img/special.png'
 };
 
 const SKILL_TAGS = [
@@ -39,3 +41,6 @@ const SKILL_TAGS = [
   '回転'
 ];
 
+function escapeRegExp(string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+}
