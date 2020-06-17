@@ -411,3 +411,4 @@ function reset() {
   $('#conditions h3:eq(0)').click();
   $('#cond-name').focus();
 }
+
