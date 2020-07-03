@@ -127,7 +127,7 @@ function exec() {
   $('#conditions').accordion('option', {'active': false});
 
   let searchFixed = $('#cond-search').val().replace(/＋/g, '+').replace(/－/g, '-')
-    .replace(/／/g, '/').replace(/％/g, '%').replace(/　/g, ' ').split(' ');
+    .replace(/／/g, '/').replace(/％/g, '%').replace(/　/g, ' ').replace(/！/g, '!').split(' ');
 
   const filters = {
     name: $('#cond-name').val().trim(),
@@ -254,11 +254,17 @@ function valid(char, filters) {
     if (filters.searchIn[j] && targets[j]) {
       let allFound = true;
       for (let k = 0; k < filters.search.length; k++) {
-        if (targets[j].indexOf(filters.search[k]) < 0
-      )
-        {
-          allFound = false;
-          break;
+        let term = filters.search[k];
+        if (term[0] == '!') {
+          if (targets[j].indexOf(term.substring(1)) >= 0) {
+            allFound = false;
+            break;
+          }
+        } else {
+          if (targets[j].indexOf(term) < 0) {
+            allFound = false;
+            break;
+          }
         }
       }
       if (allFound) {
@@ -297,7 +303,7 @@ function makeResultEntry(char, shows, search) {
   if (shows.pic) {
     $tr1.append($(`
       <td width="80">
-        <img class="char-pic" src="img/char/${char.id}.jpg">
+        <img class="char-pic" src="https://urakagi.github.io/wf-calc/img/char/${char.id}.jpg">
       </td>
     `));
   }
@@ -319,9 +325,10 @@ function makeResultEntry(char, shows, search) {
   $line1.append($tr1);
   $ret.append($line1);
   if (shows.line2) {
+    const ext = eq.id < 186 ? 'jpg' : 'png';
     $ret.append($(
       `<table class="line2"><tr>
-      <td width="80"><img class="star" src="img/star${char.star}.png"></td>
+      <td width="80"><img class="star" src="https://urakagi.github.io/wf-calc/img/star${char.star}.${ext}"></td>
       <td class="description">HP</td>
       <td>${char.hp}</td>
       <td class="description">攻撃</td>
@@ -387,11 +394,15 @@ function makeResultEntry(char, shows, search) {
 
 function emphasizeSearch(text, search) {
   let origin = text;
-  let allFound = true;
+  let allFound = false;
   for (let i = 0; i < search.length; i++) {
+    if (search[i][0] == '!') {
+      continue;
+    }
     if (search[i].length > 0 && text.indexOf(search[i]) >= 0) {
       text = text.replace(new RegExp(escapeRegExp(search[i]), 'g'),
         `<span class="searched-text">${search[i]}</span>`);
+      allFound = true;
     } else {
       allFound = false;
       break;
