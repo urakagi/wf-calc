@@ -301,9 +301,10 @@ function makeResultEntry(char, shows, search) {
   const $line1 = $('<table class="line1"></table>');
   const $tr1 = $('<tr></tr>');
   if (shows.pic) {
+    const ext = char.id < 186 ? 'jpg' : 'png';
     $tr1.append($(`
       <td width="80">
-        <img class="char-pic" src="https://urakagi.github.io/wf-calc/img/char/${char.id}.jpg">
+        <img class="char-pic" src="https://urakagi.github.io/wf-calc/img/char/${char.id}.${ext}">
       </td>
     `));
   }
@@ -325,10 +326,9 @@ function makeResultEntry(char, shows, search) {
   $line1.append($tr1);
   $ret.append($line1);
   if (shows.line2) {
-    const ext = char.id < 186 ? 'jpg' : 'png';
     $ret.append($(
       `<table class="line2"><tr>
-      <td width="80"><img class="star" src="https://urakagi.github.io/wf-calc/img/star${char.star}.${ext}"></td>
+      <td width="80"><img class="star" src="https://urakagi.github.io/wf-calc/img/star${char.star}.png"></td>
       <td class="description">HP</td>
       <td>${char.hp}</td>
       <td class="description">攻撃</td>
