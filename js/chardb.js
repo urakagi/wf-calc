@@ -325,7 +325,7 @@ function makeResultEntry(char, shows, search) {
   $line1.append($tr1);
   $ret.append($line1);
   if (shows.line2) {
-    const ext = eq.id < 186 ? 'jpg' : 'png';
+    const ext = char.id < 186 ? 'jpg' : 'png';
     $ret.append($(
       `<table class="line2"><tr>
       <td width="80"><img class="star" src="https://urakagi.github.io/wf-calc/img/star${char.star}.${ext}"></td>
