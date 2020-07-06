@@ -301,7 +301,7 @@ function makeResultEntry(char, shows, search) {
   const $line1 = $('<table class="line1"></table>');
   const $tr1 = $('<tr></tr>');
   if (shows.pic) {
-    const ext = char.id < 186 ? 'jpg' : 'png';
+    const ext = char.id < 187 ? 'jpg' : 'png';
     $tr1.append($(`
       <td width="80">
         <img class="char-pic" src="https://urakagi.github.io/wf-calc/img/char/${char.id}.${ext}">
