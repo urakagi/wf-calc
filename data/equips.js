@@ -1709,7 +1709,7 @@ const equips =
     "type": "アクセ"
   }, {
     "id": 159,
-    "name": "ＭＭ２８",
+    "name": "MM28",
     "element": "水",
     "star": 5,
     "hp": 310,
