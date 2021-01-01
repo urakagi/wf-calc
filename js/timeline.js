@@ -55,7 +55,8 @@ function exec() {
   $graph.html('<tr></tr>');
 
   const sw = [];
-  let guage = [0, 0, 0];
+  let gauge = [0, 0, 0];
+  let order = [0, 0, 0];
   let time = 0;
 
   for (let i = 0; i < 3; i++) {
@@ -66,9 +67,11 @@ function exec() {
   for (let i = 0; i < 3; i++) {
     let op = parseInt($('.opening').eq(i).val());
     if (!op) op = 0;
-    guage[i] += op * 0.01 * sw[i];
-    if (guage[i] >= sw[i]) {
-      guage = useSkill(time, guage, sw, i);
+    gauge[i] += op * 0.01 * sw[i];
+    if (gauge[i] >= sw[i]) {
+      const g = useSkill(time, gauge, sw, i, order);
+      gauge = g[0];
+      order = g[1];
     }
   }
 
@@ -79,9 +82,11 @@ function exec() {
       if (sw[i] <= 0) {
         continue;
       }
-      guage[i]++;
-      if (guage[i] >= sw[i]) {
-        guage = useSkill(time, guage, sw, i);
+      gauge[i]++;
+      if (gauge[i] >= sw[i]) {
+        const g = useSkill(time, gauge, sw, i, 0);
+        gauge = g[0];
+        order = g[1];
       }
     }
   }
@@ -93,24 +98,25 @@ function exec() {
     let lastTop = 0;
     for (let j in gSkillTimes[i]) {
       let skillTime = gSkillTimes[i][j];
+      const orderMark = order > 0 ? `(${order + 1})` : '';
       let gap = skillTime / ZOOM - cursor;
       if (gap > 0) {
         $union.append(`<div style="height: ${gap}px;"></div>`);
         cursor += gap;
-        $union.append($(`<div class="line line${i}">${skillTime}</div>`));
+        $union.append($(`<div class="line line${i}">${skillTime}${orderMark}</div>`));
         lastTop = cursor;
         cursor += LINE_HEIGHT;
       } else {
         // Line overlapped
         const $last = $union.find('.line:eq(-1)');
         if ($last.length > 0) {
-          $last.html($last.html() + ', ' + skillTime);
+          $last.html($last.html() + `, ${skillTime}${orderMark}`);
           let newBottom = skillTime / ZOOM + LINE_HEIGHT;
           $last.css('height', newBottom - lastTop);
           cursor = newBottom;
         } else {
           // Charge 100% first element
-          $union.append($(`<div class="line line${i}">${skillTime}</div>`));
+          $union.append($(`<div class="line line${i}">${skillTime}${orderMark}</div>`));
           lastTop = cursor;
           cursor += LINE_HEIGHT;
         }
@@ -126,17 +132,17 @@ function exec() {
   }
 }
 
-function useSkill(time, guage, sw, i) {
+function useSkill(time, gauge, sw, i, order) {
   gSkillTimes[i].push(time);
-  guage[i] = 0;
+  gauge[i] = 0;
   // Charge self
   {
-    let chargeLimit = parseInt($(`.charge-self-limit-${i}`).val());
+    let chargeLimit = +$(`.charge-self-limit-${i}`).val();
     if (!chargeLimit) chargeLimit = 0;
     if (chargeLimit === 0 || gChargeCount[i] < chargeLimit) {
-      let charge = parseInt($(`.charge-self-${i}`).val());
+      let charge = +$(`.charge-self-${i}`).val();
       if (!charge) charge = 0;
-      guage[i] += Math.floor(charge * 0.01 * sw[i]);
+      gauge[i] += Math.floor(charge * 0.01 * sw[i]);
     }
   }
   // Charge others
@@ -146,14 +152,15 @@ function useSkill(time, guage, sw, i) {
     if (chargeLimit === 0 || gChargeCount[i] < chargeLimit) {
       let charge = parseInt($(`.charge-${j}-${i}`).val());
       if (!charge) charge = 0;
-      guage[j] += Math.floor(charge * 0.01 * sw[j]);
+      gauge[j] += Math.floor(charge * 0.01 * sw[j]);
     }
   }
   gChargeCount[i]++;
   for (let j = 0; j < 3; j++) {
-    if (guage[j] >= sw[j]) {
-      guage = useSkill(time, guage, sw, j);
+    if (gauge[j] >= sw[j]) {
+      console.log('order='+order)
+      gauge = useSkill(time, gauge, sw, j, order + 1)[0];
     }
   }
-  return guage;
+  return [gauge, order];
 }
