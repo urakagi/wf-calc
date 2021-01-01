@@ -10,6 +10,7 @@ $().ready(() => {
 
 let gSkillTimes;
 let gChargeCount;
+let gOrders;
 
 function insertChargeInputs() {
   const $chargeTable = $('#charge-table');
@@ -51,16 +52,20 @@ function insertChargeInputs() {
 function exec() {
   const $graph = $('#graph');
   gSkillTimes = [[], [], []];
+  gOrders = [[], [], []];
   gChargeCount = [0, 0, 0];
   $graph.html('<tr></tr>');
 
   const sw = [];
   let gauge = [0, 0, 0];
-  let order = [0, 0, 0];
   let time = 0;
 
   for (let i = 0; i < 3; i++) {
-    sw[i] = (parseInt($('.sw1').eq(i).val()) + parseInt($('.sw2').eq(i).val())) / 2;
+    let sw1 = parseInt($('.sw1').eq(i).val());
+    let sw2 = parseInt($('.sw2').eq(i).val());
+    if (!sw2) sw2 = sw1;
+    if (!sw1) sw1 = sw2;
+    sw[i] = (sw1 + sw2) / 2;
   }
 
   // Opening
@@ -69,9 +74,7 @@ function exec() {
     if (!op) op = 0;
     gauge[i] += op * 0.01 * sw[i];
     if (gauge[i] >= sw[i]) {
-      const g = useSkill(time, gauge, sw, i, order);
-      gauge = g[0];
-      order = g[1];
+      gauge = useSkill(time, gauge, sw, i, 0);
     }
   }
 
@@ -84,9 +87,7 @@ function exec() {
       }
       gauge[i]++;
       if (gauge[i] >= sw[i]) {
-        const g = useSkill(time, gauge, sw, i, 0);
-        gauge = g[0];
-        order = g[1];
+        gauge = useSkill(time, gauge, sw, i, 0);
       }
     }
   }
@@ -98,7 +99,7 @@ function exec() {
     let lastTop = 0;
     for (let j in gSkillTimes[i]) {
       let skillTime = gSkillTimes[i][j];
-      const orderMark = order > 0 ? `(${order + 1})` : '';
+      const orderMark = gOrders[i][j] > 0 ? `/${gOrders[i][j] + 1}` : '';
       let gap = skillTime / ZOOM - cursor;
       if (gap > 0) {
         $union.append(`<div style="height: ${gap}px;"></div>`);
@@ -110,7 +111,7 @@ function exec() {
         // Line overlapped
         const $last = $union.find('.line:eq(-1)');
         if ($last.length > 0) {
-          $last.html($last.html() + `, ${skillTime}${orderMark}`);
+          $last.html($last.html() + ', ' + skillTime);
           let newBottom = skillTime / ZOOM + LINE_HEIGHT;
           $last.css('height', newBottom - lastTop);
           cursor = newBottom;
@@ -134,13 +135,14 @@ function exec() {
 
 function useSkill(time, gauge, sw, i, order) {
   gSkillTimes[i].push(time);
+  gOrders[i].push(order);
   gauge[i] = 0;
   // Charge self
   {
-    let chargeLimit = +$(`.charge-self-limit-${i}`).val();
+    let chargeLimit = parseInt($(`.charge-self-limit-${i}`).val());
     if (!chargeLimit) chargeLimit = 0;
     if (chargeLimit === 0 || gChargeCount[i] < chargeLimit) {
-      let charge = +$(`.charge-self-${i}`).val();
+      let charge = parseInt($(`.charge-self-${i}`).val());
       if (!charge) charge = 0;
       gauge[i] += Math.floor(charge * 0.01 * sw[i]);
     }
@@ -158,9 +160,8 @@ function useSkill(time, gauge, sw, i, order) {
   gChargeCount[i]++;
   for (let j = 0; j < 3; j++) {
     if (gauge[j] >= sw[j]) {
-      console.log('order='+order)
-      gauge = useSkill(time, gauge, sw, j, order + 1)[0];
+      gauge = useSkill(time, gauge, sw, j, order + 1);
     }
   }
-  return [gauge, order];
+  return gauge;
 }
